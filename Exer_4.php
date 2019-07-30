@@ -19,9 +19,14 @@ $person = array(
 );
 
 echo "<br>Original<br>";
-echo $person['first_name'][0]. " " . $person['last_name'][0];
+print_r($person);
+
+$temporary = $person['first_name'][0];
+$person['first_name'][0] = $person['last_name'][0];
+$person['last_name'][0] = $temporary;
+
 echo "<br>Swapped<br>";
-echo $person['last_name'][0]. " " . $person['first_name'][0];
+print_r($person);
 ?>
 
 <?php
